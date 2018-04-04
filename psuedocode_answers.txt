@@ -1,0 +1,80 @@
+Questions
+	1. Why do programmers use pseudocode?
+
+	  Answer: Programmers use pseudocode to plan algorithms. Pseudocode is an important step in planning the logic and design of a project.
+
+	2. If you run pseudocode on your computer what would happen?
+
+	  Answer: Nothing because it is not a language for computers to run bun instead it is code that is easily readable and easier to understand for human consumption.
+
+Programming Assignment
+	
+	Write the following algorithms in pseudocode:
+
+
+	1. Create a function that takes two numbers and prints out the greater number.
+	
+		INPUT firstNumber
+		INPUT secondNumber
+		
+		FUNCTION greaterNumber(firstNumber, secondNumber)
+		  IF firstNumber IS GREATER THAN secondNumber THEN
+		    RETURN firstNumber
+		  ELSE IF secondNumber IS GREATER THAN firstNumber THEN
+		    RETURN secondNumber
+		  ENDIF
+		END FUNCTION
+
+	2. Create a function that prints out the numbers from 1 to 100.
+
+		FUNCTION printHundred
+		  FOR a number STARTING AT 0 IS LESS THAN 100 INCREMENT 1
+		    PRINT number
+		  END FOR
+		END FUNCTION
+
+	3. Create a function that searches for a specific entry in a phonebook.
+
+		INPUT name
+
+		FUNCTION findContact(name, contacts)
+
+		  FOR contact START AT 0 IS LESS THAN contacts.length INCREMENT 1
+
+		    IF name EQUALS contacts[contact].name THEN
+		      RETURN contacts[contact].number
+		    END IF
+
+		  END FOR
+
+		  RETURN 'Contact not found'
+
+		END FUNCTION
+
+	4. Using the pseudocode you wrote for the previous question, implement it in any computer language of your choice.
+
+		JavaScript
+		
+		var contacts = [
+  		  {name: 'John', number: '123-456-7890'},
+  		  {name: 'Bob', number: '999-888-7777'},
+  		  {name: 'David', number: '555-555-5555'},
+  		  {name: 'Angela', number: '444-444-4444'}
+		]
+
+		function findContact(contacts, name){
+
+  		  for(i = 0; i < contacts.length; i++){
+
+    		    if(name === contacts[i].name){
+      		      return contacts[i].number;
+    		    }
+
+  		  }
+
+  		  return 'Contact not found';
+
+		}
+
+		console.log(findContact(contacts, 'David'))
+
